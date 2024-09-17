@@ -1,0 +1,32 @@
+1) Título grande y centrado (alineamiento), cambiar color de texto y fondo para mejorar el contraste.
+2) Enlaces del menú separados (alineamiento).
+3) Establecer mayor separación entre los distintas secciones.
+4) En los textos de las secciones cambiar el color para mejorar el contraste.
+5) Pie de página centrado (alineamiento) , cambiar color de texto y fondo para mejorar el contraste.
+
+// CORRECCIÓN
+
+- CONTRAST
+
+Color fuente/fondo en header/footer
+tamaño del texto 
+Color navbar
+
+- HIERARCHY:
+
+Orden de los item en el navbar
+Tamaño encabezados
+Espaciado entre secciones
+
+
+- PROXIMITY
+
+Espacio del título/footer respecto a los demas elementos
+Navbar-secciones
+Opciones navbar
+Margenes respecto a la ventana del navegador
+
+
+- ALIGNMENT
+
+titulo/footer centrado
