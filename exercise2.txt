@@ -1,0 +1,18 @@
+Typography
+
+- Elegir 2 fuentes
+
+Font Pairing
+@font-face
+
+a) h1,h2 (serif) GOOGLE FONTS / URL SERVIDOR GOOGLE
+b) resto (sans-serif) GOOGLE FONTS / DESCARGAR FUENTE EN LOCAL
+
+Colores
+
+- Elegir dos colores (HSL)
+
+a) Primario (mas presente) / Analogos, Complementarios, Monocromáticos..
+b) Secundario (menos presencia)
+
+

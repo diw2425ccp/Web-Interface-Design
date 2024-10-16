@@ -45,94 +45,117 @@ footer {
 }
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lobster&family=Spicy+Rice&display=swap');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Fuentes/Roboto/Roboto-Regular.woff2'),url('Fuentes/Roboto/Roboto-Regular.ttf') format('truetype');
+}
 
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
     color: #000000;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background-color: black;
+    background-color: hsl(233, 81%, 10%);
     text-align: center;
     padding: 5px;
-    font-family: 'Courier New', Courier, monospace;
-
 }
 
 h1 {
     color: white;
-
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav{
-    margin-top: -22px;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(233, 55%, 20%);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    background-color: #f4f4f4;
+
 }
 
 nav ul li {
     display: inline;
-    
+
+
 }
 
 nav ul li a {
-text-decoration: none;
-padding: 20px;
-font-family:fantasy;
-color:black;
+    text-decoration: none;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color:hsl(61,94%,52%);
+
 }
 
-nav ul li a:hover{
-    font-size: larger;
-    color: orange;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 main{
     margin-top:5%;
- 
+    flex-grow: 1;
+    display: flex;
+
+    @media(width<=500px) {
+        display: block;
+    }
+
 }
 
 section {
-    margin: 20px;
     border: solid 2px black;
     border-radius: 20px;
-    padding: 5px;
-    background-color:orange;
-    
+    margin: 5px 20px 20px;
+    padding: 5px 5px 5px 10px;
+    background-color: hsl(61, 90%, 61%);
+    align-self: flex-start;
+    /*
+    background-color: hsl(233, 55%, 20%);
+    */
+
 }
 
 
 section h2 {
-    font-size: 19px;
-    color: blue;
-    margin-top: 5px;
-    padding-left: 10px;
+
+    font-family: "Berkshire Swash", serif;
+    font-weight: bold;
+    font-style: normal;
+
 }
 
 section p {
-    font-size:small;
-    color: black;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
     font-style: italic;
     margin-top: -8px;
     padding-left: 10px;
 }
 
 footer {
-    background-color: black;
+    background-color:hsl(233, 81%, 10%);
     text-align: center;
     color: white;
-    position:fixed;
-    bottom: 0;
     width: 100%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
 }
+
 

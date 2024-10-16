@@ -1,0 +1,4 @@
+3 columnas
+Footer abajo
+Responsive  usando media queries-> 1 columna
+PARA LOGRARLO USAR FLEX
