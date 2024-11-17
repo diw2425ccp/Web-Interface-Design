@@ -1,0 +1,82 @@
+For each of the following <p> elements, list all the CSS rules that apply to its color, identify the final applied value, and explain why that value is used.
+
+For <p id="mission">
+List all rules that apply to its color.
+#mission (1,0,0){
+    color: darkorange;
+}
+.text (0,1,0){
+    color: #555;
+}
+p (0,0,1){
+    color: black
+}
+What is the final color, and why?
+it's darkorange, because the id (#mission) is the most specific selector
+
+
+For <p id="team">
+List all rules that apply to its color.
+<p id="team" class="text" style="color: darkblue;">
+.text (0,1,0){
+    color: #555;
+}
+p (0,0,1){
+    color: black
+}
+What is the final color, and why?
+it's darkblue, because the inline style has more priority
+because of its location in the html.
+
+
+For <p id="experience">
+List all rules that apply to its color.
+.text (0,1,0){
+    color: #555;
+}
+p (0,0,1){
+    color: black
+}
+#experience (1,0,0) {
+    color: darkgray;
+}
+#about p:last-child (1,1,1) {
+    color: green;
+}
+What is the final color, and why?
+it's green, because the last selector has the highest
+specificity score.
+
+
+For <p id="services-intro">
+List all rules that apply to its color.
+p (0,0,1){
+    color: black
+}
+.text (0,1,0) {
+    color: #555;
+}
+.intro (0,1,0) {
+    color: blue;
+}
+What is the final color, and why?
+It's blue because, since we have two classes with the same
+specificity, the last one is the one that applies.
+
+
+For <p id="offer">
+List all rules that apply to its color.
+<p id="offer" class="text" style="color: darkblue;
+#offer (1,0,0) {
+    color: darkgreen !important;
+}
+p (0,0,1){
+    color: black
+}
+.text (0,1,0) {
+    color: #555;
+}
+What is the final color, and why?
+it's darkgreen, because although we have an inline style in the
+html, we have the flag !important in the id #offer that makes
+it more priority.

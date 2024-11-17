@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto 2fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+}
+
+
+.grid-container .header {
+    grid-area: header;
+    display: grid;
+    padding: 35px;
+    place-items: center;
+    background-color: lime;
+    color: white;
+}
+
+.grid-container .menu {
+    grid-area: menu;
+    padding: 10px 100px 0 10px;
+}
+
+.grid-container .menu ul {
+    list-style: none;
+}
+
+.grid-container .menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.grid-container .principal {
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, 100px);
+    grid-area: content;
+    background-color: antiquewhite;
+}
+
+.grid-container .principal > div {
+    display: grid;
+    background-color: lightgray;
+    border-radius: 5px;
+    height: 100px;
+    place-items: center;
+}
+
+.grid-footer {
+    display: grid;
+    grid-area: footer;
+    background-color: black;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    padding: 20px;
+}
+
+.grid-footer ul {
+    list-style: none;
+    display: contents;
+}
+
+.grid-footer .footer1 { justify-self: start; }
+.grid-footer .footer2 { justify-self: center; }
+.grid-footer .footer3 { justify-self: end; }
+
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "menu"
+            "content"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .grid-container .menu {
+        display: grid;
+        text-align: center;
+        place-items: center;
+        padding: 0;
+    }
+
+    .grid-container .menu li { padding: 5px; }
+
+    .grid-footer {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .grid-footer .footer1 {
+        justify-self: center;
+        order: 3;
+    }
+
+    .grid-footer .footer2 {
+        justify-self: center;
+        order: 2;
+    }
+
+    .grid-footer .footer3 {
+        justify-self: center;
+        order: 1;
+    }
+}
