@@ -25,7 +25,7 @@
     </header>
     <div class="row h-100">
         <div class="col-3">
-            <aside class=" p-5 d-flex flex-column  align-items-center bg-body-secondary">
+            <aside class=" p-5 d-flex flex-column  align-items-center bg-body-secondary h-100">
                 <h2 class="display-4">Categories</h2>
                 <ul class="list-unstyled h2">
                     <li>
@@ -124,21 +124,25 @@
         </div>
     </div>
 
-    <footer class=" text-white bg-gradient bg-dark p-3  fs-5 ">
+    <footer class="text-white bg-gradient bg-dark p-2 fs-5 text-center">
         <form>
-            <h5>Contact us</h5>
-            <label for="email" class="form-label">Email</label>
-            <input type="text" id="email" class="form-control" placeholder="Enter your email">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+            <h5 class="h2">Contact us</h5>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" id="email" class="form-control text-center" placeholder="Enter your email">
+                <div class="form-text text-white">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control text-center" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
             <button type="submit" class="btn btn-primary">
                 <svg class="bi" width="16" height="16" fill="currentColor">
                     <use xlink:href="bootstrap-icons.svg#send-fill"></use>
                 </svg>
                 Send</button>
         </form>
-
-        <p>&copy; 2024 Online Store. All rights reserved.</p>
+        <p class="fs-6 mb-0 mt-2">&copy; 2024 Online Store. All rights reserved.</p>
     </footer>
 </div>
 </body>
