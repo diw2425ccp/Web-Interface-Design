@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=./dist/main.css rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Online Store</title>
+</head>
+
+<body>
+<div class="container-fluid d-flex flex-column vh-100 p-0">
+    <header class="p-2 bg-gradient bg-black text-center text-white">
+        <div class="d-flex ">
+            <div class="flex-grow-1">
+                <h1 class="display-1" >
+                    <i class="bi bi-shop"></i>
+                    Online Store</h1>
+                <p class="display-6 fst-italic text-warning">Your favorite place to shop</p>
+            </div>
+            <button class="btn btn-primary align-self-center">
+                <i class="bi bi-cart"></i>
+                View Cart</button>
+        </div>
+    </header>
+    <div class="row h-100">
+        <div class="col-3">
+            <aside class=" p-5 d-flex flex-column  align-items-center bg-body-secondary h-100">
+                <h2 class="display-4">Categories</h2>
+                <ul class="list-unstyled h2">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plugin" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 1 2.898 5.673c-.167-.121-.216-.406-.002-.62l1.8-1.8a3.5 3.5 0 0 0 4.572-.328l1.414-1.415a.5.5 0 0 0 0-.707l-.707-.707 1.559-1.563a.5.5 0 1 0-.708-.706l-1.559 1.562-1.414-1.414 1.56-1.562a.5.5 0 1 0-.707-.706l-1.56 1.56-.707-.706a.5.5 0 0 0-.707 0L5.318 5.975a3.5 3.5 0 0 0-.328 4.571l-1.8 1.8c-.58.58-.62 1.6.121 2.137A8 8 0 1 0 0 8a.5.5 0 0 0 1 0"/>
+                        </svg>
+                        <a href="#electronics" class="text-decoration-none link-opacity-50-hover">Electronics</a></li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-universal-access" viewBox="0 0 16 16">
+                            <path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M6 5.5l-4.535-.442A.531.531 0 0 1 1.531 4H14.47a.531.531 0 0 1 .066 1.058L10 5.5V9l.452 6.42a.535.535 0 0 1-1.053.174L8.243 9.97c-.064-.252-.422-.252-.486 0l-1.156 5.624a.535.535 0 0 1-1.053-.174L6 9z"/>
+                        </svg>
+                        <a href="#clothing" class="text-decoration-none link-opacity-50-hover">Clothing</a></li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                        </svg>
+                        <a href="#books" class="text-decoration-none link-opacity-50-hover">Books</a></li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                        </svg>
+                        <a href="#home-garden" class="text-decoration-none link-opacity-50-hover">Home & Garden</a></li>
+                </ul>
+            </aside>
+        </div>
+        <div class="col">
+            <main class="p-4 bg-body">
+                <h2 class="text-center display-5 fw-bold text-info">Featured Products</h2>
+                <section class="product-grid p-4">
+                    <div class="row">
+                        <div class="col">
+                            <article class="card">
+                                <img class="card-img" src="https://via.placeholder.com/150" alt="Product 1">
+                                <h3 class="p-2">Product 1</h3>
+                                <p class="ps-2">$20.00</p>
+                                <button class="btn btn btn-outline-success">
+                                    <i class="bi bi-bag-plus"></i>
+                                    Add to Cart</button>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card">
+                                <img class="card-img" src="https://via.placeholder.com/150" alt="Product 2">
+                                <h3 class="p-2">Product 2</h3>
+                                <p class="ps-2">$15.00</p>
+                                <button class="btn btn btn-outline-success">
+                                    <i class="bi bi-bag-plus"></i>
+                                    Add to Cart</button>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card">
+                                <img class="card-img" src="https://via.placeholder.com/150" alt="Product 3">
+                                <h3 class="p-2">Product 3</h3>
+                                <p class="ps-2">$30.00</p>
+                                <button class="btn btn btn-outline-success">
+                                    <i class="bi bi-bag-plus"></i>
+                                    Add to Cart</button>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card">
+                                <img class="card-img" src="https://via.placeholder.com/150" alt="Product 4">
+                                <h3 class="p-2">Product 4</h3>
+                                <p class="ps-2">$25.00</p>
+                                <button class="btn btn btn-outline-success">
+                                    <i class="bi bi-bag-plus"></i>
+                                    Add to Cart</button>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card">
+                                <img class="card-img" src="https://via.placeholder.com/150" alt="Product 5">
+                                <h3 class="p-2">Product 5</h3>
+                                <p class="ps-2">$18.00</p>
+                                <button class="btn btn btn-outline-success">
+                                    <i class="bi bi-bag-plus"></i>
+                                    Add to Cart</button>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card">
+                                <img class="card-img" src="https://via.placeholder.com/150" alt="Product 6">
+                                <h3 class="p-2">Product 6</h3>
+                                <p class="ps-2">$35.00</p>
+                                <button class="btn btn-outline-success">
+                                    <i class="bi bi-bag-plus"></i>
+                                    Add to Cart</button>
+                            </article>
+                        </div>
+
+                    </div>
+
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer class="text-white bg-gradient bg-dark p-2 fs-5 text-center">
+        <form>
+            <h5 class="h2">Contact us</h5>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" id="email" class="form-control text-center" placeholder="Enter your email">
+                <div class="form-text text-white">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control text-center" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <svg class="bi" width="16" height="16" fill="currentColor">
+                    <use xlink:href="bootstrap-icons.svg#send-fill"></use>
+                </svg>
+                Send</button>
+        </form>
+        <p class="fs-6 mb-0 mt-2">&copy; 2024 Online Store. All rights reserved.</p>
+    </footer>
+</div>
+</body>
+
+</html>
