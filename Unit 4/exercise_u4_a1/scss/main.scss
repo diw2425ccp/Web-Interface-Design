@@ -1,22 +1,8 @@
 @use "sass:color";
-@use "sass:list";
 @use "sass:map";
 
-$primary: #1abc9c;
-$secondary: #37de09;
-$font-size-base: 1rem;
-$body-color: #34495e;
-$border-radius: 1rem;
-$accordion-icon-width: 1rem;
 
-$body-bg: rgba(26, 188, 156, 0.1);
-$border-color: #16a085;
-$border-width: 2px;
 
-$new-colors: (
-        "tertiary": orange,
-        "accent": purple
-);
 
 $new-border-widths:(
         6:6px,
@@ -28,15 +14,18 @@ $new-display-font-sizes:(
         8: 1.5rem
 );
 
-
 @import "../node_modules/bootstrap/scss/mixins/banner";
 @include bsBanner("");
-
 
 // scss-docs-start import-stack
 // Configuration
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
+
+$new-colors: (
+        "tertiary": orange,
+        "accent": tint-color($success, 30%),
+);
 
 $new-spacers:(
         6: $spacer * 4,
@@ -47,6 +36,7 @@ $new-spacers:(
 
 $theme-colors: map.merge($theme-colors, $new-colors);
 $border-widths: map.merge($border-widths, $new-border-widths);
+$display-font-sizes:map.merge($display-font-sizes, $new-display-font-sizes);
 $spacers: map.merge($spacers, $new-spacers);
 
 @import "../node_modules/bootstrap/scss/maps";
@@ -92,44 +82,4 @@ $spacers: map.merge($spacers, $new-spacers);
 // Utilities
 @import "../node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
-
-
-
-@function calculate-percentage($value, $total: 100) {
-  @return ($value / $total) * 100%;
-}
-
-
-.test{
-  width: calculate-percentage(50,200);
-  color: color.complement($primary);
-}
-
-$colors: red, green, blue;
-
-@each $color in $colors {
-  .box-#{$color} {
-    background-color: $color;
-  }
-}
-
-
-
-$theme-colors: (
-        "primary": #007bff,
-        "secondary": #6c757d,
-        "accent": #37DE09FF
-);
-
-
-
-@each $key, $color in $theme-colors {
-  .text-#{$key} {
-    color: $color;
-  }
-  .bg-#{$key} {
-    background-color: $color;
-  }
-}
-
 
