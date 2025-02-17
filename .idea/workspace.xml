@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e34874a-a715-4ae8-a3c5-7549cc574b62" name="Changes" comment="added svg sprite and some icons to the web">
-      <change beforePath="$PROJECT_DIR$/Unit 3/exercise_u3_a2/unit3_activity2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Unit 3/exercise_u3_a2/unit3_activity2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unit 3/exercise_u3_a3/unit3_activity3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Unit 3/exercise_u3_a3/unit3_activity3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Web-Interface-Design.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Web-Interface-Design.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/exercise_u4_a1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/exercise_u4_a1/assets/ebook-cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/exercise_u4_a1/assets/kindle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/exercise_u4_a1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Unit 4/exercise_u4_a1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/exercise_u4_a1/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/exercise_u4_a1/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Unit 4/exercise_u4_a1/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/testSass/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/testSass/bootstrap-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/testSass/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/testSass/scss/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit 4/testSass/unit3_activity3.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +57,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/alumno/Desktop/Web-Interface-Design",
+    "last_opened_file_path": "C:/Users/crist/Desktop/exercise_u4_a1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,16 +74,9 @@
       <recent name="C:\Users\alumno\Desktop\Web-Interface-Design" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\crist\Desktop\Web-Interface-Design\Unit 4\exercise_u4_a1" />
       <recent name="C:\Users\alumno\Desktop\Web-Interface-Design\Unit 2" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PS-243.21565.202" />
-        <option value="bundled-php-predefined-a98d8de5180a-5fbe0c30323e-com.jetbrains.php.sharedIndexes-PS-243.21565.202" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -93,6 +97,8 @@
       <workItem from="1734422395197" duration="587000" />
       <workItem from="1734423008322" duration="9412000" />
       <workItem from="1734443655493" duration="52000" />
+      <workItem from="1739383968480" duration="4374000" />
+      <workItem from="1739538864547" duration="631000" />
     </task>
     <task id="LOCAL-00001" summary="refactored css">
       <option name="closed" value="true" />
