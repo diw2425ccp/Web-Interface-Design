@@ -1,0 +1,167 @@
+@use "sass:map";
+
+// Configuration
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+
+@function validHexadecimalColor($color) {
+  // Convert the color to a string
+  $color-str: inspect($color);
+
+  // Check the length of the color
+  @if not (str-length($color-str) == 4 or str-length($color-str) == 7 or str-length($color-str) == 9) {
+    @return false;
+  }
+
+  // Check that the first character is '#'
+  @if not (str-slice($color-str, 1, 1) == "#") {
+    @return false;
+  }
+
+  // Extract the remaining characters (after '#')
+  $chars: str-slice($color-str, 2);
+
+  $valid-chars: "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+  "a", "b", "c", "d", "e", "f",
+  "A", "B", "C", "D", "E", "F";
+
+  // Verify each character
+  @for $i from 1 through str-length($chars) {
+    $char: str-slice($chars, $i, $i);
+
+    // If the character is not in the valid list, return false
+    @if not index($valid-chars, $char) {
+      @return false;
+    }
+  }
+
+  // If all characters are valid, return true
+  @return true;
+}
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$primary:#c29338;
+$secondary:green;
+$font-size-base: 1.125rem;
+$body-color:#495057;
+$border-radius: .800rem;
+$accordion-icon-width:30px;
+
+$btn-font-size:1.2rem;
+$input-bg:lightgray;
+$link-color:orange;
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+
+$new-spacers:(
+        6:$spacer*4,
+        7:$spacer*5
+);
+
+$new-border-widths:(
+        6:6px,
+        7:7px
+);
+
+$new-display-font-sizes:(
+        7:2rem,
+        8:1.5rem
+);
+
+$theme-colors: map.merge(
+                $theme-colors,
+                (
+                        "tertiary": orange,
+                        "accent": tint-color($success, 30%)
+                )
+);
+
+$border-widths:map.merge($border-widths,$new-border-widths);
+$display-font-sizes:map.merge($display-font-sizes,$new-display-font-sizes);
+$spacers:map.merge($spacers,$new-spacers);
+
+@import "../node_modules/bootstrap/scss/maps";
+
+@mixin setBackgroundAndTextColor($backgroundColor){
+  @if(validHexadecimalColor($backgroundColor)){
+    background-color: $backgroundColor;
+    color: color-contrast($backgroundColor);
+  }
+  @else {
+    background-color: white;
+    color:black;
+  }
+}
+
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+.title{
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: $spacer*4;
+  text-align: center;
+}
+
+@each $key, $value in $theme-colors {
+  .title-#{$key}{
+    @include setBackgroundAndTextColor($value);
+    @extend .title;
+  }
+}
+
+// Tests for valid colors
+@debug validHexadecimalColor(#a3b); // true (4 characters)
+@debug validHexadecimalColor(#21f6ab); // true (7 characters)
+@debug validHexadecimalColor(#21f6abff); // true (9 characters)
+
+// Tests for invalid colors
+@debug validHexadecimalColor(#abcde); // false (longitud incorrecta)
+@debug validHexadecimalColor(#1234567890); // false (longitud incorrecta)
+@debug validHexadecimalColor(abc123); // false (no comienza con '#')
+@debug validHexadecimalColor(#g12); // false (carácter no válido 'g')
+@debug validHexadecimalColor(#123z45); // false (carácter no válido 'z')
+@debug validHexadecimalColor(#123 45); // false (espacio no válido)
