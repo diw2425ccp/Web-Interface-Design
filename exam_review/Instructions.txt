@@ -1,0 +1,38 @@
+1. Customize Bootstrap:
+
+Change primary and secondary colors.
+Disable default border-radius for all components.
+Add a new tertiary color to the theme.
+Add a new margin and padding level.
+
+2. Use Bootstrap:
+
+The main header should have a large centered display text and use the primary color.
+Use card component inside main section.
+Apply margin and padding to the cards.
+Buttons inside the cards should be secondary color and large size buttons.
+Ensure each card takes up the entire row on small screens, half the row on medium screens and one-third of the row on large screens.
+
+3. Create a mixin to apply padding and margin. 
+
+The mixing should have one parameter.
+If the parameter is positive, it should be used for both padding and margin.
+If the parameter is 0 or negative, both should be set to 0.
+
+4. Create a base class for a banner component with Sass.  
+
+This base class should inherit Bootstrap classes for:
+Light background color
+Secondary text color
+Lead text
+Tertiary color border
+When hovered, the banner should change its background color to info color.
+The button inside the banner should use an outlined tertiary color style
+Set margin and padding using the created mixin.
+
+5. Generate three size variants of the banner:
+
+Small (width: 25%)
+Medium (width: 50%)
+Large (width: 75%)
+Apply the medium banner class to the last section in the document.
