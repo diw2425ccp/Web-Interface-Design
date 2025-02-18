@@ -10,7 +10,7 @@
 
 $primary:orange;
 $secondary:green;
-$border-radius:0;
+$enable-rounded: false;
 
 
 
@@ -91,13 +91,16 @@ $theme-colors,
   @extend .bg-light;
   @extend .text-secondary;
   @extend .lead;
+  @extend .border;
   @extend .border-tertiary;
   &:hover {
     @extend .bg-info;
 }
-  .btn{
+  button {
+    @extend .btn;
     @extend .btn-outline-tertiary;
   }
+
   @include spacer(1rem);
 }
 
