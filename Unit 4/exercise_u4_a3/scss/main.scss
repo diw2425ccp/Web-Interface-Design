@@ -153,14 +153,14 @@ $spacers:map.merge($spacers,$new-spacers);
 }
 
 // Tests for valid colors
-@debug validHexadecimalColor(#a3b); // true (4 characters)
-@debug validHexadecimalColor(#21f6ab); // true (7 characters)
-@debug validHexadecimalColor(#21f6abff); // true (9 characters)
+@debug validHexadecimalColor(#a3b); // true
+@debug validHexadecimalColor(#21f6ab); // true
+@debug validHexadecimalColor(#21f6abff); // true
 
 // Tests for invalid colors
-@debug validHexadecimalColor(#abcde); // false (longitud incorrecta)
-@debug validHexadecimalColor(#1234567890); // false (longitud incorrecta)
-@debug validHexadecimalColor(abc123); // false (no comienza con '#')
-@debug validHexadecimalColor(#g12); // false (carácter no válido 'g')
-@debug validHexadecimalColor(#123z45); // false (carácter no válido 'z')
-@debug validHexadecimalColor(#123 45); // false (espacio no válido)
+@debug validHexadecimalColor(#abcde); // false
+@debug validHexadecimalColor(#1234567890); // false
+@debug validHexadecimalColor(abc123); // false
+@debug validHexadecimalColor(#g12); // false
+@debug validHexadecimalColor(#123z45); // false
+@debug validHexadecimalColor(#123 45); // false
